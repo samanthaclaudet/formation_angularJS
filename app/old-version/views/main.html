@@ -1,0 +1,51 @@
+<div class="background">
+  <div class="box">
+      <div class="title"><span>Lorem Ipsum {{bonjour}}</span></div>
+      <div class="content">Lorem ipsum dolor sit amet, consectetur
+           adipisicing elit, sed do eiusmod tempor incididunt ut
+           labore et dolore magna aliqua. Ut enim ad minim veniam,
+      quis nostrud exercitation ullamco laboris nisi ut aliquip
+              ex ea commodo consequat. Duis aute irure dolor in
+   reprehenderit in voluptate velit esse cillum dolore eu
+   fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+   non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </div>
+
+    <i class="fa fa-birthday-cake fa-spin"></i>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4"><i class="fa fa-taxi fa-3x"><br/> Bla bla bla bla</i></div>
+    <div class="col-md-4"><i class="fa fa-university fa-3x"><br/>Bla bla bla bla</i></div>
+    <div class="col-md-4"><i class="fa fa-cloud fa-3x"><br/>Bla bla bla bla</i></div>
+  </div>
+
+  <input ng-model="myFilter" placeholder="recherche"/>
+
+  <div class="blabla">
+    <ul ng-show="myFilter.length>1">
+      <li ng-repeat="truc in liste | filter:myFilter">
+        {{truc}}
+      </li>
+    </ul>
+
+  </div>
+
+  <div ng-if="isOlderThan(14,5)">coucou</div>
+
+
+
+  <div class="bloblo">
+    <ul>
+      <li ng-repeat="truc in object">
+        {{truc.name}} a {{truc.age}} an(s)
+      </li>
+    </ul>
+
+  </div>
+
+
+  <!-- <button ng-click="goToDetail()">goToDetail</button> -->
+  <a href="#/detail">goToDetail</a>
+
+</div>

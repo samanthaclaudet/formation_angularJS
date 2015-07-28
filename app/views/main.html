@@ -1,0 +1,25 @@
+<div class="form">
+  <div class="form-message">
+    <textarea ng-model="myMessage" placeholder="message"/> </br>
+  </div>
+
+  <button ng-click="submit()">Tweeter</button>
+</div>
+
+<div class="tweets">
+  <ul>
+    <li ng-repeat="tweet in tweets">
+      <img src="http://www.gravatar.com/wavatar/{{tweet.authorEmailHash}}">
+      <a href="#/{{tweet.id}}">{{tweet.authorName}}</a>
+      </br>{{tweet.message}}
+      <!--</br>{{timestampToRelativeDate(tweet.date)}}-->
+      {{tweet.date | ago}}
+      </br>
+    </li>
+    </br>
+  </ul>
+
+  <span ng-show="errorsGet">{{errors.code}}, {{errors.key}} : {{errors.message}}</span>
+  <span ng-show="errorsPost">{{errors.code}}, {{errors.key}} : {{errors.message}}</span>
+
+</div>

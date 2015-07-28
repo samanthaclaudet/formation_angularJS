@@ -1,0 +1,22 @@
+<div class="form">
+  <div class="form-message">
+    <textarea ng-model="myMessage" placeholder="message"/> </br>
+  </div>
+
+  <button ng-click="submit()">Tweeter</button>
+</div>
+
+<div class="tweets">
+  <ul>
+    <li ng-repeat="tweet in tweets" ng-class="{'selected': !tweet.answer}">
+      <a href="#/{{tweet.id}}">{{tweet.authorName}}</a>
+      </br>{{tweet.message}}
+      <!--</br>{{timestampToRelativeDate(tweet.date)}}-->
+      {{tweet.date | ago}}
+    </li>
+  </ul>
+
+  <span ng-show="errorsGet">{{errors.code}}, {{errors.key}} : {{errors.message}}</span>
+  <span ng-show="errorsPost">{{errors.code}}, {{errors.key}} : {{errors.message}}</span>
+
+</div>
